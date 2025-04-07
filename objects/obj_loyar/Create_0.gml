@@ -34,7 +34,7 @@ func_cine23 = function(_res)
 	else
 	{
 		inst_61784201.on_end = func_cine20B;
-		inst_61784201.func_dialog("Es una moneda con la balanza de la justicia, símbolo de equidad y orden. Se dice que fue el amuleto de la suerte de un abogado que nunca perdió un juicio, ya que lo obligaba a esforzarse para que la verdad siempre prevalezca.", "Dolesio");
+		inst_61784201.func_dialog("Es una moneda con la balanza de la justicia, símbolo de equidad y orden.", "Dolesio");
 	}
 }
 
@@ -80,7 +80,32 @@ func_cine25A = function(_res)
 func_cine20B = function(_res)
 {
 	inst_61784201.on_end = func_cine21B;
-	inst_61784201.func_dialog("Lanzó la moneda al aire y, por culpa de esto, una persona fue condenada y otra quedó libre.", "Dolesio");
+	inst_61784201.func_dialog("Se dice que fue el amuleto de la suerte de un abogado que nunca perdió un juicio, ya que lo obligaba a esforzarse para que la verdad siempre prevalezca.", "Dolesio");
+}
+func_cine21B = function(_res)
+{
+	inst_61784201.on_end = func_cine22B;
+	inst_61784201.func_dialog("¡Exactamente como pienso yo! La justicia es lo único que mantiene el equilibrio en el mundo.", "Abog.");
+	//Me la llevaré. Espero que me impulse a ser una mejor abogada cada día.
+}
+func_cine22B = function(_res)
+{
+	inst_61784201.on_end = func_cine23B;
+	inst_61784201.func_dialog("Me la llevaré. Espero que me impulse a ser una mejor abogada cada día.", "Abog.");
+
+}
+func_cine23B = function(_res)
+{
+	inst_61784201.opened = false;
+	inst_13B0B81F.fade_target = 1;
+	alarm[1] = 80;
+	
+	target[1] = 256;
+	
+	sprite_index = spr_loyar_front;
+	image_speed = 1;
+	
+	audio_sound_gain(music_id, 0, 500);
 }
 
 //POSITION
