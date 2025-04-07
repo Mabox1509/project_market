@@ -74,6 +74,7 @@ func_cine35A = function(_res)
 
 func_cine30B = function(_res)
 {
+	inst_61784201.on_end = func_cine31B;
 	inst_61784201.func_dialog("¡Lo sabía! Siempre inventa cosas. Apuesto a que si la veo de noche, no se moverá ni un poquito.", "Niño");
 }
 func_cine31B = function(_res)
